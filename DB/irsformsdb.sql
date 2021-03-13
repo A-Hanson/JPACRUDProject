@@ -21,8 +21,10 @@ USE `irsformdb` ;
 DROP TABLE IF EXISTS `form` ;
 
 CREATE TABLE IF NOT EXISTS `form` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `form_number` VARCHAR(20) NOT NULL,
+  `form_title` VARCHAR(50) NULL,
+  `year` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -42,7 +44,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `irsformdb`;
-INSERT INTO `form` (`id`, `form_number`) VALUES (1, 'Form Test-1');
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (1, 'Form Test-1', NULL, NULL);
 
 COMMIT;
 

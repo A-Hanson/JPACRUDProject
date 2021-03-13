@@ -47,6 +47,8 @@ class FormTest {
 	void test_1() {
 		assertNotNull(form);
 		assertEquals("Form Test-1", form.getFormNumber());
+		assertEquals("Test Title (English Version)", form.getFormTitle());
+		assertEquals(2017, form.getYear());
 	}
 
 }

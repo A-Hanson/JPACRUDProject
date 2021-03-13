@@ -22,8 +22,8 @@ DROP TABLE IF EXISTS `form` ;
 
 CREATE TABLE IF NOT EXISTS `form` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `form_number` VARCHAR(20) NOT NULL,
-  `form_title` VARCHAR(50) NULL,
+  `form_number` VARCHAR(45) NOT NULL,
+  `form_title` VARCHAR(100) NULL,
   `year` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -44,7 +44,16 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `irsformdb`;
-INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (1, 'Form Test-1', NULL, NULL);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (1, 'Form Test-1', 'Test Title (English Version)', 2017);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (2, 'Publ 1', 'Your Rights As A Taxpayer', 2017);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (3, 'Publ 1', 'Your Rights As A Taxpayer', 2014);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (4, 'Publ 15-B', 'Employer\'s Tax Guide to Fringe Benefits', 2021);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (5, 'Publ 15-B', 'Employer\'s Tax Guide to Fringe Benefits', 2020);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (6, 'Publ 54', 'Tax Guide for U.S. Citizens and Resident Aliens Abroad', 2020);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (7, 'Publ 54', 'Tax Guide for U.S. Citizens and Resident Aliens Abroad', 2019);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (8, 'Publ 502', 'Medical and Dental Expenses', 2020);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (9, 'Publ 502', 'Medical and Dental Expenses', 2019);
+INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (10, 'Publ 502', 'Medical and Dental Expenses', 2018);
 
 COMMIT;
 

@@ -30,7 +30,6 @@ public class FormController {
 	
 	@RequestMapping(path="getForm.do", params="formId")
 	public String displayOneForm(@RequestParam("formId") int formId, Model model) {
-//		Form form = formDAO.findById(formId);
 		List<Form> forms = new ArrayList<>();
 		forms.add(formDAO.findById(formId));
 		model.addAttribute("results", forms);
@@ -39,7 +38,6 @@ public class FormController {
 	
 	@RequestMapping(path="getForm.do", params="formNum")
 	public String displayMultiForm(@RequestParam("formNum") String formNum, Model model) {
-//		Form form = formDAO.findById(formId);
 		List<Form> forms = formDAO.findByFormNumber(formNum);
 		model.addAttribute("results", forms);
 		return "form/show";

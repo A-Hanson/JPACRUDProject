@@ -45,7 +45,6 @@
 						<td>${f[0]}</td>
 						<td>${f[1]}</td>
 						<td>
-						<%-- <c:set var="num" value="${fn:replace(f[0], ' ', '-')}" /> --%>
 						<a href="getForm.do?formNum=${f[0]}">Full List</a>
 						</td>
 						

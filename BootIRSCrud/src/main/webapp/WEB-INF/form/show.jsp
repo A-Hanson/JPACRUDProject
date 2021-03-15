@@ -16,6 +16,10 @@
 </head>
 <body>
 	<div class="container">
+		<c:if test="${empty results }">
+		<h3>Sorry, no form(s) found.</h3>
+		</c:if>
+		<c:if test="${not empty results }">
 		<table class="table table-striped caption-top text-center">
 			<caption>Found Form(s):</caption>
 			<thead>
@@ -58,7 +62,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-
+		</c:if>
 
 		<a href="home.do">Return</a>
 		<!-- ADD DELETE BUTTON -->

@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `form` (
 ENGINE = InnoDB;
 
 SET SQL_MODE = '';
-DROP USER IF EXISTS formuser@localhost;
+-- DROP USER IF EXISTS formuser@localhost;
 SET SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 CREATE USER 'formuser'@'localhost' IDENTIFIED BY 'formuser';
 
@@ -20205,4 +20205,3 @@ INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (20177, 'F
 INSERT INTO `form` (`id`, `form_number`, `form_title`, `year`) VALUES (20178, 'Pakg 1024', 'Application for Recognition of Exemption Under Section 501(a) for Determination Under Section 120 of the Internal Revenue Code', 1998);
 
 COMMIT;
-
